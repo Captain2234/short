@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+    int n,m,i,j,count=0;
+    printf("enter any range to find prime in between them");
+    scanf("%d%d",&n,&m);
+    
+    for (i=n;i<=m;i++)
+    {
+        count=0;
+        for(j=2;j<i;j++)
+        {
+          
+           if(i%j==0)
+           {
+                count++;
+                break;
+           }
+                
+        }
+        if(count==0)
+        {
+            printf("\t%d",i);
+        }
+     
+    }
+    
+    return 0;
+}
